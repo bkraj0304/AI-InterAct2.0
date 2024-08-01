@@ -38,7 +38,7 @@ function App() {
     const prompt = "Give me 3 word short description of prompt as I want to save user prompt with that name only. Here is the prompt: " + messageStore[0].user;
     var prompt_Generated = await gemini_model_call(prompt);
 
-    const response = await fetch('https://ai-interact2-0-backend.onrender.com/send', {
+    const response = await fetch('http://localhost:3001/send', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -65,7 +65,7 @@ function App() {
 
   const fetchData = useCallback(async () => {
     try {
-      const response = await fetch(`https://ai-interact2-0-backend.onrender.com/getData`, {
+      const response = await fetch(`http://localhost:3001/getData`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json'
