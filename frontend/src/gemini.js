@@ -8,7 +8,7 @@ const genAI = new GoogleGenerativeAI(apikey);
 async function gemini_model_call(user_message) {
   // The Gemini 1.5 models are versatile and work with multi-turn conversations (like chat)
   const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-latest"});
-
+// Heello
   const chat = model.startChat({
     history: [
       {
