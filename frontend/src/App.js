@@ -48,17 +48,17 @@ function App() {
     });
 
     const dataa = await response.json();
-    console.log("Frontend", dataa);
+    // console.log("Frontend", dataa);
 
     if (dataa.message === "Data inserted successfully!!!") {
-      console.log("Final", messageStore, dataa.data);
+      // console.log("Final", messageStore, dataa.data);
       setPromptText(prevPromptText => [
         ...prevPromptText,
         { text: messageStore, id: dataa.data }
       ]);
       setDescription(prompt_Generated);
 
-      console.log("Test", promptText);
+      // console.log("Test", promptText);
     }
     alert(dataa);
   };
@@ -72,7 +72,7 @@ function App() {
         }
       });
       const output = await response.json();
-      console.log("fetchData", output);
+      // console.log("fetchData", output);
       if (output.message === "User data processed successfully") {
         setConversationList(output.conversationData);
       } else {
@@ -108,7 +108,7 @@ function App() {
         { text: user_input, isBot: false },
         { text: res, isBot: true }
       ]);
-      console.log(setMessages);
+      // console.log(setMessages);
     } catch (error) {
       console.error('Error:', error);
     }
@@ -119,7 +119,7 @@ function App() {
   }
 
   const handleConversationClick = (conversation) => {
-    console.log("Conversation clicked:", conversation);
+    // console.log("Conversation clicked:", conversation);
     setPromptDetails(conversation.conversation_messages);
   };
 
@@ -131,7 +131,7 @@ function App() {
 
   useEffect(() => {
     fetchData();
-    console.log("promptDetails updated:", promptdetails);
+    // console.log("promptDetails updated:", promptdetails);
     msgEnd.current.scrollIntoView();
   }, [messages, promptText, fetchData, promptdetails]);
 

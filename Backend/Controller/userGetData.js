@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 module.exports = async function (req, res, next) {
-    console.log("Hiii");
+    // console.log("Hiii");
    
 
     /* Check if userName already exists in the DB --> don't insert --> return Error message to UI */

@@ -39,7 +39,7 @@ module.exports = async function (req, res, next) {
         await fs.writeFile(filePath, JSON.stringify(conversations, null, 2));
         output.message='Data inserted successfully!!!';
         output.data=newConversation.id;
-        console.log("Backend",output);
+        // console.log("Backend",output);
         res.send(output);
     } catch (error) {
         console.error('Error processing request', error);

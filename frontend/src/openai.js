@@ -1,13 +1,13 @@
 const  OpenAIApi = require('openai');
 const apiKey = process.env.REACT_APP_OPENAI_API_KEY;
-console.log("openai",apiKey);
+// console.log("openai",apiKey);
 
 const openai = new OpenAIApi({ apiKey, dangerouslyAllowBrowser: true });
 // secret_key = ""
 
 // Define and export an async function to send a message to OpenAI
 async function sendMsgToOpenAI(message) {
-    console.log(message);
+    // console.log(message);
     try {
         // prompt = "Consider yourself to be a code genretater. Provide correct code for the following instructions: "+message;
         // Use the OpenAIApi instance to create a completion
@@ -22,7 +22,7 @@ async function sendMsgToOpenAI(message) {
         // console.log(res);
         // const responseText = chatCompletion.data.choices[0].message.content;
         const responseText = chatCompletion.choices[0].message.content;
-        console.log("Response from OpenAI:", responseText);
+        // console.log("Response from OpenAI:", responseText);
         return responseText; // Return the response text
     } catch (error) {
         // Handle error here

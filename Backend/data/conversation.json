@@ -178,5 +178,16 @@
         "chatbot": "That's an interesting start! To help me understand better, could you tell me more about your dogs? \n\nFor example:\n\n* What are their names?\n* What breeds are they?\n* Are they puppies or adults?\n* What are they like? Playful, lazy, energetic? \n* Anything else you'd like to share about them! \n"
       }
     ]
+  },
+  {
+    "conversation_id": 13,
+    "conversation_title": "Arnav meaning request \n",
+    "conversation_date": "2024-08-01T15:35:52.908Z",
+    "conversation_messages": [
+      {
+        "user": "Whats arnav means",
+        "chatbot": "\"Arnav\" is a name of Indian origin, most commonly found in Hindi and Sanskrit.  It has a few possible meanings: \n\n* **\"Worthy of praise\"** or **\"Praiseworthy\"** \n* **\"One who deserves respect\"**\n* **\"The leader\"** or **\"The one who is leading\"**\n\nIt's a strong and meaningful name with a positive connotation. \n"
+      }
+    ]
   }
 ]

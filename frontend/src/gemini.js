@@ -1,14 +1,13 @@
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
-// Access your API key as an environment variable (see "Set up your API key" above)
 const api_key = process.env.REACT_APP_GEMINI_API_KEY;
-const apikey ="AIzaSyAYhSjvYEJhhSvudIDIXEAbAR";
-
+// console.log("API Key Raj:", api_key);
+const apikey =api_key;
 const genAI = new GoogleGenerativeAI(apikey);
-console.log(genAI);
+// console.log(genAI);
 async function gemini_model_call(user_message) {
   // The Gemini 1.5 models are versatile and work with multi-turn conversations (like chat)
-  const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash"});
+  const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-latest"});
 
   const chat = model.startChat({
     history: [
@@ -31,7 +30,7 @@ async function gemini_model_call(user_message) {
   const result = await chat.sendMessage(user_message);
   const response = await result.response;
   const text = response.text();
-  console.log(text);
+  // console.log(text);
   return text;
 }
 
