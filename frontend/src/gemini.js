@@ -3,7 +3,7 @@ const { GoogleGenerativeAI } = require("@google/generative-ai");
 const api_key = process.env.REACT_APP_GEMINI_API_KEY;
 
 const genAI = new GoogleGenerativeAI(api_key);
-console.log(genAI);
+// console.log(genAI);
 async function gemini_model_call(user_message) {
   // The Gemini 1.5 models are versatile and work with multi-turn conversations (like chat)
   const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-latest"});
